@@ -1,4 +1,5 @@
 let b = require('./ball');
+let player = require('./player');
 let length = 30;
 let width = 100;
 let arr = new Array(length);
@@ -15,9 +16,14 @@ const table = () => {
         arr[i][j] = '=';
       } else if (j === b.ball.xPos && i === b.ball.yPos) {
         arr[i][j] = '*';
+      } else if (j === 0 && player.isThereRacket(i, player.player1)) {
+        arr[i][j] = '|';
+      } else if (j === 99 && player.isThereRacket(i, player.player2)) {
+        arr[i][j] = '|';
       } else {
         arr[i][j] = ' ';
       }
+
       /* if (i === 0) {
         arr[i][j] = '=';
       } else if (i === arr.length - 1) {
