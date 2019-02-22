@@ -8,7 +8,7 @@ const key = () => {
   keypress(process.stdin);
   process.stdin.resume();
 };
-
+// Valami
 process.stdin.on('keypress', function (ch, key) {
   if (key) {
     if (key.name === 'w') player.movePlayer('w', player.player1);
