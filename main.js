@@ -2,13 +2,12 @@ let table = require('./matrix');
 let ball = require('./ball');
 let player = require('./player');
 var keypress = require('keypress');
-
 const key = () => {
   process.stdin.setRawMode(true);
   keypress(process.stdin);
   process.stdin.resume();
 };
-// Valami
+
 process.stdin.on('keypress', function (ch, key) {
   if (key) {
     if (key.name === 'w') player.movePlayer('w', player.player1);
