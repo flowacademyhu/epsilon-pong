@@ -39,6 +39,7 @@ const moveBall = (ball, arr) => {
     ball.counter++;
     console.log('EZ SZÉP ÜTÉS VOLT!');
     console.log(`Az eredmeny ${ball.player1} : ${ball.player2}`);
+    return true;
   } else if (ball.point === true && ball.counter === 30) {
     ball.point = false;
     ball.counter = 0;

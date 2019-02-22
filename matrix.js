@@ -17,24 +17,12 @@ const table = () => {
       } else if (j === b.ball.xPos && i === b.ball.yPos) {
         arr[i][j] = '*';
       } else if (j === 0 && player.isThereRacket(i, player.player1)) {
-        arr[i][j] = '|';
+        arr[i][j] = '║';
       } else if (j === 99 && player.isThereRacket(i, player.player2)) {
-        arr[i][j] = '|';
+        arr[i][j] = '║';
       } else {
         arr[i][j] = ' ';
       }
-
-      /* if (i === 0) {
-        arr[i][j] = '=';
-      } else if (i === arr.length - 1) {
-        arr[i][j] = '=';
-      } else if ((j === 0 && i < 15) || (j === 99 && i > 15)) {
-        arr[i][j] = 'a';
-      } else if (j === b.ball.xPos && i === b.ball.yPos) {
-        arr[i][j] = '*';
-      } else {
-        arr[i][j] = ' ';
-      } */
     }
   }
 
@@ -43,13 +31,12 @@ const table = () => {
 
 const writeTable = (arr) => {
   for (let i = 0; i < arr.length; i++) {
-    let kiiras = '          ';
+    let write = '                     ';
     for (let j = 0; j < arr[i].length; j++) {
-      kiiras += arr[i][j];
+      write += arr[i][j];
     }
-    process.stdout.write(`${kiiras}\n`);
+    process.stdout.write(`${write}\n`);
   }
 };
-writeTable(table());
 
 module.exports = { table, writeTable };
