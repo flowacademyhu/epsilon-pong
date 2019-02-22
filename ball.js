@@ -11,11 +11,8 @@ let ball = {
   player1: 0,
   player2: 0
 };
-
+// move the ball
 const moveBall = (ball, arr) => {
-  /*  if (ball.xPos === 0 || ball.xPos === 100) {
-     ball.xDir = -1 * ball.xDir;
-   } */
   if (ball.xPos === 1 && arr[ball.yPos][0] !== ' ') {
     ball.xDir = -1 * ball.xDir;
   } else if (ball.xPos === 1 && arr[ball.yPos][0] === ' ') {
