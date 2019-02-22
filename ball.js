@@ -13,9 +13,6 @@ let ball = {
 };
 
 const moveBall = (ball, arr) => {
-  /*  if (ball.xPos === 0 || ball.xPos === 100) {
-     ball.xDir = -1 * ball.xDir;
-   } */
   if (ball.xPos === 1 && arr[ball.yPos][0] !== ' ') {
     ball.xDir = -1 * ball.xDir;
   } else if (ball.xPos === 1 && arr[ball.yPos][0] === ' ') {
@@ -43,6 +40,7 @@ const moveBall = (ball, arr) => {
     ball.counter++;
     console.log('EZ SZÉP ÜTÉS VOLT!');
     console.log(`Az eredmeny ${ball.player1} : ${ball.player2}`);
+    return true;
   } else if (ball.point === true && ball.counter === 30) {
     ball.point = false;
     ball.counter = 0;
