@@ -30,6 +30,7 @@ const table = () => {
   ctx.fg(25, 160, 255);
   return arr;
 };
+
 let write;
 const writeTable = (arr) => {
   for (let i = 0; i < arr.length; i++) {
