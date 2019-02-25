@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 let table = require('../lib/matrix');
 let ball = require('../lib/ball');
 let player = require('../lib/player');
