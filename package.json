@@ -1,5 +1,5 @@
 {
-  "name": "epsilon-pong",
+  "name": "@flowacademy/epsilon-pong",
   "version": "0.0.1",
   "description": "Classic arcade game: Pong inspired by 1972 Atari",
   "main": "./bin/pong",
