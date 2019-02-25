@@ -1,18 +1,23 @@
 {
-  "name": "test",
+  "name": "tasi",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "dependencies": {
-    "async": "^2.6.2",
-    "axel": "0.0.3",
-    "keypress": "^0.2.1",
-    "readline-sync": "^1.4.9"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flowacademyhu/epsilon-pong.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flowacademyhu/epsilon-pong/issues"
+  },
+  "homepage": "https://github.com/flowacademyhu/epsilon-pong#readme",
+  "dependencies": {
+    "axel": "0.0.3",
+    "keypress": "^0.2.1"
+  }
 }

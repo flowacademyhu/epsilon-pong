@@ -7,7 +7,7 @@ const delayedNTimes = (ball, n) => {
   return ball.point === true && ball.counter === 30;
 };
 
-let n = 30;
+const n = 30;
 const delay = (ball) => {
   if (delayUntilN(ball, n)) {
     ball.counter++;

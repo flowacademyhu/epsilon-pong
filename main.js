@@ -2,6 +2,12 @@ let table = require('./matrix');
 let ball = require('./ball');
 let player = require('./player');
 var keypress = require('keypress');
+let p1Up = 'w';
+let p1Down = 's';
+let p2Up = 'o';
+let p2Down = 'l';
+let exit = 'q';
+
 const key = () => {
   process.stdin.setRawMode(true);
   keypress(process.stdin);
@@ -10,17 +16,17 @@ const key = () => {
 
 process.stdin.on('keypress', function (ch, key) {
   if (key) {
-    if (key.name === 'w') player.movePlayer('w', player.player1);
-    if (key.name === 's') player.movePlayer('s', player.player1);
-    if (key.name === 'o') player.movePlayer('o', player.player2);
-    if (key.name === 'l') player.movePlayer('l', player.player2);
-    if (key.name === 'q') process.exit(1);
+    if (key.name === p1Up) player.movePlayer(p1Up, player.player1);
+    if (key.name === p1Down) player.movePlayer(p1Down, player.player1);
+    if (key.name === p2Up) player.movePlayer(p2Up, player.player2);
+    if (key.name === p2Down) player.movePlayer(p2Down, player.player2);
+    if (key.name === exit) process.exit(1);
   }
 });
 
 (function () {
   let interval = 100;
-  let timer = function () {
+  let timer = () => {
     console.clear();
     if (ball.moveBall(ball.ball, table.table()) === true) {
       interval = 100;
