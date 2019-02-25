@@ -1,17 +1,17 @@
 {
-  "name": "tasi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "epsilon-pong",
+  "version": "0.0.1",
+  "description": "Classic arcade game: Pong inspired by 1972 Atari",
+  "main": "./bin/pong",
+  "bin": {
+    "pong": "./bin/pong"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flowacademyhu/epsilon-pong.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Andor Hajnal, Dániel Simon - Flow Academy",
+  "license": "Apache2",
   "bugs": {
     "url": "https://github.com/flowacademyhu/epsilon-pong/issues"
   },
